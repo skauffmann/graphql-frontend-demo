@@ -25,6 +25,10 @@ A very simple Apollo GraphQL server and a NextJS application :
   - The experimental Apollo Graphql with the NextJS App Router examples (query, mutation and subscription) on client components - [apps/web/app/app-router/page.tsx](apps/web/app/app-router/page.tsx)
   - The experimental Apollo Graphql with the NextJS App Router examples (query, mutation and subscription) on React Server component - [apps/web/app/app-router/rsc/page.tsx](apps/web/app/app-router/rsc/page.tsx)
 
+### Unit tests
+
+An exemple of unit test using Apollo and Jest is available on [apps/web/components/tests/books.test.tsx](apps/web/components/tests/books.test.tsx)
+
 ### Generated code
 
 Some part of the frontend app is generated using GraphQL schema and frontend graphql (Relay) or gql (Apollo) template literal tags.
