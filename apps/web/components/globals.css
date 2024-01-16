@@ -56,3 +56,15 @@ button {
   background-color: #fff;
   cursor: pointer;
 }
+
+nav ul {
+  display: flex;
+  margin: 0.5rem 0;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+}
