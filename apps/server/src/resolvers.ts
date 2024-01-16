@@ -1,6 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-
 enum BookType {
   NOVEL = 'NOVEL',
   MANGA = 'MANGA',
