@@ -1,0 +1,10 @@
+overwrite: true
+schema:
+  - 'http://localhost:4000/graphql'
+documents:
+  - 'hooks/**/*.{ts,tsx}'
+generates:
+  ./shared/generated-types/:
+    preset: client
+    presetConfig:
+      fragmentMasking: false

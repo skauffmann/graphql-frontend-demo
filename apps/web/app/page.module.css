@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  /* padding: 6rem; */
   min-height: 100vh;
 }
 
@@ -12,6 +12,7 @@
 }
 
 .description {
+  margin-top: 5rem;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -84,9 +85,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(1, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
+  margin-bottom: 5rem;
 }
 
 .card {
@@ -219,8 +221,9 @@
 
 .logo {
   z-index: 50;
-  width: 120px;
-  height: 120px;
+  width: 500px;
+  height: 171px;
+  color: white;
 }
 
 .logoGradientContainer {

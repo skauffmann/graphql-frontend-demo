@@ -1,0 +1,39 @@
+.books {
+  padding: 0;
+}
+.books li {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+  border-radius: 5px;
+  /* box-shadow: 0 0 5px #ccc; */
+  list-style: none;
+  background-color: #e5e7eb;
+  color: #000;
+}
+.books h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.books li em {
+  display: flex;
+  align-items: center ;
+  gap: 5px;
+  font-weight: 100;
+  font-size: small;
+}
+.books li p {
+  margin: 0;
+}
+.books button:hover {
+  background-color: #ccc;
+}
+.books button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+

@@ -5,24 +5,46 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "generate:types": "yarn wait && graphql-codegen --config graphql-codegen.yml",
+    "generate:possible-types": "yarn wait && node ./possible-types.js",
+    "relay:schema": "yarn wait && yarn rover graph introspect http://localhost:4000 --output ./shared/relay/relay-schema.graphql",
+    "relay:generate": "yarn wait && relay-compiler",
+    "wait": "wait-on http://localhost:4000/health",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "@apollo/client": "^3.8.9",
+    "@apollo/experimental-nextjs-app-support": "^0.6.0",
+    "@apollo/rover": "^0.22.0",
+    "@faker-js/faker": "^8.3.1",
+    "axios": "^1.6.5",
+    "babel-plugin-relay": "^16.1.0",
+    "deepmerge": "^4.3.1",
+    "graphql": "^16.8.1",
+    "graphql-ws": "^5.14.3",
+    "lodash.isequal": "^4.5.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-relay": "^0.0.0-main-ece1fd95",
+    "relay-runtime": "^0.0.0-main-ece1fd95"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
     "@next/eslint-plugin-next": "^14.0.4",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/eslint": "^8.56.1",
+    "@types/lodash.isequal": "^4.5.8",
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "@types/react-relay": "^16.0.6",
+    "@types/relay-runtime": "^14.1.22",
     "eslint": "^8.56.0",
+    "relay-compiler": "^0.0.0-main-ece1fd95",
     "typescript": "^5.3.3"
   }
 }
